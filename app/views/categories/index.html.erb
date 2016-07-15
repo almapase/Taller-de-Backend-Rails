@@ -1,0 +1,17 @@
+<h1>Categories</h1>
+<table>
+  <thead>
+    <tr>
+      <th>Category name</th>
+      <th>% of discount</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @categories.each do |category| %>
+    <tr>
+      <td><%= category.name %></td>
+      <td><%= category.discount %></td>
+    </tr>
+    <% end%>
+  </tbody>
+</table>
