@@ -1,11 +1,52 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
+
 one:
-  name: 
-  price: 1
-  category_id: 
+  name: DVD
+  category: one
+  price: 12098
 
 two:
-  name: 
-  price: 1
-  category_id: 
+  name: TV LCD
+  category: one
+  price: 34526
+
+three:
+  name: Radio FM
+  category: one
+  price: 35561
+
+four:
+  name: MacBook air
+  category: two
+  price: 56663561
+
+five:
+  name: DELL Inspiron
+  category: two
+  price: 56663561
+
+six:
+  name: HP lasert Jet 1122
+  category: two
+  price: 563561
+
+seven:
+  name: Sillón
+  category: three
+  price: 53561
+
+eigth:
+  name: Macetero
+  category: three
+  price: 56661
+
+nine:
+  name: Cama de 2 plazas
+  category: four
+  price: 5666761
+
+ten:
+  name: Cama de 1 1/2 plaza
+  category: four
+  price: 56761
