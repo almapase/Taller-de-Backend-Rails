@@ -1,4 +1,14 @@
 <h1>Products</h1>
+<div class="filtro">
+  <form class="" action=<%= products_filter_path %> method="post">
+    <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+    <label for="filter_mane">Name</label>
+    <input for="filter_mane" type="text" name="name" value="">
+    <label for="filter_price">Price</label>
+    <input for="filter_price" type="number" name="price" value="">
+    <button type="submit" name="button">Filter</button>
+  </form>
+</div>
 <table>
   <thead>
     <tr>

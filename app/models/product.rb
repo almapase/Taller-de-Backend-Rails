@@ -7,6 +7,9 @@ class Product < ActiveRecord::Base
   scope :premiums, -> { where(premium: true)  }
   scope :last_5, -> { order(created_at: :desc).limit(5)  }
   scope :last_n, -> (n){ order(created_at: :desc).limit(n)  }
+  scope :filter_by_name, ->(query) { where("name like ?", "%#{query}%")  }
+  scope :filter_by_price, ->(query) { where(price: query)  }
+
 
   def price_mayor_cero
     if price.nil? || price <= 0
