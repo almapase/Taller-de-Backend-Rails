@@ -1,0 +1,23 @@
+<h1>Products</h1>
+<table>
+  <thead>
+    <tr>
+      <th>Category</th>
+      <th>Product name</th>
+      <th>Premium?</th>
+      <th>Price</th>
+      <th>Price with discount</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @products.each do |product| %>
+    <tr>
+      <td><%= product.category.try(:name) %></td>
+      <td><%= product.name %></td>
+      <td><%= product.premium ? "Yes" : "No" %></td>
+      <td><%= product.price %></td>
+      <td><%= product.price_with_discount %></td>
+    </tr>
+    <% end%>
+  </tbody>
+</table>
