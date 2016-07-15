@@ -28,5 +28,9 @@ class Product < ActiveRecord::Base
     end
   end
 
+  def price_with_discount
+    (price - (price * (category.discount/100.0))).to_i
+  end
+
 
 end

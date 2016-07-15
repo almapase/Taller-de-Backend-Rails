@@ -10,10 +10,10 @@ Category.destroy_all
 Product.destroy_all
 
 category_list = [
-  ["Electrodomesticos", 0],
+  ["Electrodomesticos", 10],
   ["Tecnología", 30],
   ["Terraza", 10],
-  ["Dormitorio", 0]
+  ["Dormitorio", 5]
 ]
 
 category_list.each do |name, discount|
@@ -25,7 +25,7 @@ product_list = [
   ["TV LCD", "Electrodomesticos", 34526, false],
   ["Radio FM", "Electrodomesticos", 35561, true],
   ["MacBook air", "Tecnología", 56663561, false],
-  ["DELL Inspiron", "Tecnología", 56663561], true,
+  ["DELL Inspiron", "Tecnología", 56663561, true],
   ["HP lasert Jet 1122", "Tecnología", 563561, false],
   ["Sillón", "Terraza", 53561, true],
   ["Macetero", "Terraza", 56661, false],
