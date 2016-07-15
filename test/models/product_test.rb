@@ -14,4 +14,9 @@ class ProductTest < ActiveSupport::TestCase
     @product.category = nil
     assert_not @product.valid?
   end
+
+  test "Filed premium must be false for default value" do
+    p = Product.create(name: "test", category_id: 1, price: 1233)
+    assert_equal false, p.premium
+  end
 end

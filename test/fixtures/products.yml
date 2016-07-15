@@ -5,48 +5,58 @@ one:
   name: DVD
   category: one
   price: 12098
+  premium: true
 
 two:
   name: TV LCD
   category: one
   price: 34526
+  premium: false
 
 three:
   name: Radio FM
   category: one
   price: 35561
+  premium: true
 
 four:
   name: MacBook air
   category: two
   price: 56663561
+  premium: false
 
 five:
   name: DELL Inspiron
   category: two
   price: 56663561
+  premium: true
 
 six:
   name: HP lasert Jet 1122
   category: two
   price: 563561
+  premium: false
 
 seven:
   name: Sillón
   category: three
   price: 53561
+  premium: true
 
 eigth:
   name: Macetero
   category: three
   price: 56661
+  premium: false
 
 nine:
   name: Cama de 2 plazas
   category: four
   price: 5666761
+  premium: true
 
 ten:
   name: Cama de 1 1/2 plaza
   category: four
   price: 56761
+  premium: false

@@ -21,18 +21,18 @@ category_list.each do |name|
 end
 
 product_list = [
-  ["DVD", "Electrodomesticos", 12098],
-  ["TV LCD", "Electrodomesticos", 34526],
-  ["Radio FM", "Electrodomesticos", 35561],
-  ["MacBook air", "Tecnología", 56663561],
-  ["DELL Inspiron", "Tecnología", 56663561],
-  ["HP lasert Jet 1122", "Tecnología", 563561],
-  ["Sillón", "Terraza", 53561],
-  ["Macetero", "Terraza", 56661],
-  ["Cama de 2 plazas", "Dormitorio", 5666761],
-  ["Cama de 1 1/2 plaza", "Dormitorio", 56761],
+  ["DVD", "Electrodomesticos", 12098, true],
+  ["TV LCD", "Electrodomesticos", 34526, false],
+  ["Radio FM", "Electrodomesticos", 35561, true],
+  ["MacBook air", "Tecnología", 56663561, false],
+  ["DELL Inspiron", "Tecnología", 56663561], true,
+  ["HP lasert Jet 1122", "Tecnología", 563561, false],
+  ["Sillón", "Terraza", 53561, true],
+  ["Macetero", "Terraza", 56661, false],
+  ["Cama de 2 plazas", "Dormitorio", 5666761, true],
+  ["Cama de 1 1/2 plaza", "Dormitorio", 56761, false],
 ]
 
-product_list.each do |name, category, price|
-  Product.create(name: name, category: Category.find_by(name: category), price: price)
+product_list.each do |name, category, price, premium|
+  Product.create(name: name, category: Category.find_by(name: category), price: price, premium: premium)
 end
