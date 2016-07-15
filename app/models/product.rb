@@ -4,6 +4,7 @@ class Product < ActiveRecord::Base
   validates :category, presence: true
 
   scope :premiums, -> { where(premium: true)  }
+  scope :last_5, -> { order(created_at: :desc).limit(5)  }
 
   def price_mayor_cero
     if price <= 0
