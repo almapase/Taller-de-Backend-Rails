@@ -9,7 +9,7 @@ class Product < ActiveRecord::Base
   scope :last_n, -> (n){ order(created_at: :desc).limit(n)  }
 
   def price_mayor_cero
-    if price <= 0
+    if price.nil? || price <= 0
       errors.add(:price, "el precio debe ser mayor a 0")
       return false
     end
@@ -27,4 +27,6 @@ class Product < ActiveRecord::Base
       category.destroy
     end
   end
+
+
 end

@@ -9,4 +9,9 @@ class CategoryTest < ActiveSupport::TestCase
     @category.destroy
     assert_equal 0, @category.products.size
   end
+
+  test "discount must beetwen 0 and 100" do
+    @category.discount = 120
+    assert_not (0..100).include?(@category.discount)
+  end
 end

@@ -2,12 +2,16 @@
 
 one:
   name: Electrodomesticos
+  discount: 0
 
 two:
   name: Tecnología
+  discount: 10
 
 three:
   name: Terraza
+  discount: 30
 
 four:
   name: Dormitorio
+  discount: 0

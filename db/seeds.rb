@@ -10,14 +10,14 @@ Category.destroy_all
 Product.destroy_all
 
 category_list = [
-  "Electrodomesticos",
-  "Tecnología",
-  "Terraza",
-  "Dormitorio"
+  ["Electrodomesticos", 0],
+  ["Tecnología", 30],
+  ["Terraza", 10],
+  ["Dormitorio", 0]
 ]
 
-category_list.each do |name|
-  Category.create(name: name)
+category_list.each do |name, discount|
+  Category.create(name: name, discount: discount)
 end
 
 product_list = [
