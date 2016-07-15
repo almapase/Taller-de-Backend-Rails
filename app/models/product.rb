@@ -1,6 +1,7 @@
 class Product < ActiveRecord::Base
   belongs_to :category
   before_validation :price_mayor_cero
+  validates :category, presence: true
 
   def price_mayor_cero
     if price <= 0
