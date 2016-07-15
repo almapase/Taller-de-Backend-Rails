@@ -19,4 +19,10 @@ class ProductTest < ActiveSupport::TestCase
     p = Product.create(name: "test", category_id: 1, price: 1233)
     assert_equal false, p.premium
   end
+
+  test "premiums must be only premiun true" do
+    Product.premiums.each do |p|
+      assert_equal true, p.premium
+    end
+  end
 end

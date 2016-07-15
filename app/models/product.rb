@@ -3,6 +3,8 @@ class Product < ActiveRecord::Base
   before_validation :price_mayor_cero, :default_value_for_premium
   validates :category, presence: true
 
+  scope :premiums, -> { where(premium: true)  }
+
   def price_mayor_cero
     if price <= 0
       errors.add(:price, "el precio debe ser mayor a 0")
