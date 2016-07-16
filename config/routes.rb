@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  get 'categories/index'
+  resources :categories
+  # get 'categories/index'
   get 'products/index'
   post 'products/filter'
 
