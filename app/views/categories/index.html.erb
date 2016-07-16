@@ -1,20 +1,23 @@
 <p id="notice"><%= notice %></p>
-<h1>Categories</h1>
-<table>
-  <thead>
-    <tr>
-      <th>Category name</th>
-      <th>% of discount</th>
-      <th>Delete</th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @categories.each do |category| %>
-    <tr>
-      <td><%= category.name %></td>
-      <td><%= category.discount %></td>
-      <td><%= link_to 'Destroy', category, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-    </tr>
-    <% end%>
-  </tbody>
-</table>
+
+<div class="panel panel-primary">
+  <div class="panel-heading">Categories</div>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Category name</th>
+        <th>Discount</th>
+        <th>Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @categories.each do |category| %>
+      <tr>
+        <td><%= category.name %></td>
+        <td><%= category.discount %> %</td>
+        <td><%= link_to 'Destroy', category, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+      <% end%>
+    </tbody>
+  </table>
+</div>

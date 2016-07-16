@@ -1,5 +1,5 @@
 class Product < ActiveRecord::Base
-  belongs_to :category
+  belongs_to :category, counter_cache: true
   before_validation :default_value_for_premium
   validates :category, presence: true
   validates :price, numericality: {greater_than: 0}

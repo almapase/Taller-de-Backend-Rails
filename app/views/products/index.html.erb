@@ -1,36 +1,37 @@
 <h1>Products</h1>
-<div class="filtro">
-  <form class="" action=<%= products_filter_path %> method="post">
-    <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
-    <label for="filter_mane">Name</label>
-    <input for="filter_mane" type="text" name="name" value="">
-    <label for="filter_price">Price</label>
-    <input for="filter_price" type="number" name="price" value="">
-    <button type="submit" name="button">Filter</button>
-  </form>
+<div class="panel panel-primary">
+  <div class="panel-heading">Products</div>
+  <div class="panel-body">
+    <form class="" action=<%= products_filter_path %> method="post">
+      <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+      <label for="filter_mane">Name</label>
+      <input for="filter_mane" type="text" name="name" value="">
+      <label for="filter_price">Price</label>
+      <input for="filter_price" type="number" name="price" value="">
+      <button type="submit" name="button">Filter</button>
+    </form>
+    <%= link_to 'See all Categories', categories_path   %>
+  </div>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Category</th>
+        <th>Product name</th>
+        <th>Premium?</th>
+        <th>Price</th>
+        <th>Price with discount</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @products.each do |product| %>
+      <tr>
+        <td><%= product.category.try(:name) %></td>
+        <td><%= product.name %></td>
+        <td><%= product.premium ? "Yes" : "No" %></td>
+        <td><%= product.price %></td>
+        <td><%= product.price_with_discount %></td>
+      </tr>
+      <% end%>
+    </tbody>
+  </table>
 </div>
-<div class="">
-  <%= link_to 'See all Categories', categories_path   %>
-</div>
-<table>
-  <thead>
-    <tr>
-      <th>Category</th>
-      <th>Product name</th>
-      <th>Premium?</th>
-      <th>Price</th>
-      <th>Price with discount</th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @products.each do |product| %>
-    <tr>
-      <td><%= product.category.try(:name) %></td>
-      <td><%= product.name %></td>
-      <td><%= product.premium ? "Yes" : "No" %></td>
-      <td><%= product.price %></td>
-      <td><%= product.price_with_discount %></td>
-    </tr>
-    <% end%>
-  </tbody>
-</table>
