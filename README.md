@@ -7,6 +7,8 @@
 
 Un sitio ecommerce tiene diversas categorías de productos, en cada una de esas cateogorías aparecen los productos junto a sus precios.
 
+###[DEMO en Heroku](https://mighty-hamlet-94445.herokuapp.com/)
+
 ##Parte Backend
 
 1. Crear una aplicación llamada tienda con PostgreSQL
