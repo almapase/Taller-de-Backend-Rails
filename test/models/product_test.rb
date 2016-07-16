@@ -21,8 +21,10 @@ class ProductTest < ActiveSupport::TestCase
   end
 
   test "premiums must be only premiun true" do
-    Product.premiums.each do |p|
-      assert_equal true, p.premium
-    end
+    # Product.premiums.each do |p|
+    #   assert_equal true, p.premium
+      values = Product.premiums.map(&:premium)
+      assert_not_includes(values, false)
+
   end
 end
