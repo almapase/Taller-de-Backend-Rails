@@ -21,25 +21,29 @@ Un sitio ecommerce tiene diversas categorías de productos, en cada una de esas 
   - Crear validación
   - Crear test
 
-7. Agregar datos al seed Construir un seed con 3 categorías
-Agregar al menos dos productos a cada categoría del seed
-8. Agregar datos a los fixtures
-Los mismos datos incorporados en el seed
+7. Agregar datos al seed
+  - Construir un seed con 3 categorías
+  - Agregar al menos dos productos a cada categoría del seed
+
+8. Agregar datos a los fixtures Los mismos datos incorporados en el seed
 9. Agregar el campo premium a los productos.
-El campo premium por defecto debe ser false
-Crear un test que lo valide
+  - El campo premium por defecto debe ser false
+  - Crear un test que lo valide
+
 10. Se debe agregar el scope premium para seleccionar todos los productos premium
-Modificar el fixture para agregar un producto premium
-Hacer un test del scope
-11. Se debe agregar el scope last _5 para mostrar los últimos 5 productos agregados a la BD
+  - Modificar el fixture para agregar un producto premium
+  - Hacer un test del scope
+
+11. Se debe agregar el scope last_5 para mostrar los últimos 5 productos agregados a la BD
 12. Se debe agregar el Scope last_n que recibe como parámetro el número de productos a devolver
 13. Borrar en cascada los productos al borrar una categoría
-Crear un test que lo valide
+  - Crear un test que lo valide
+
 14. Al borrar el último producto de una categoría se debe borrar la categoría (hint: ocupar el callback after_destroy)
 15. Crear un campo del tipo integer para categoría llamado descuento que debe ir de 0 a 100.
-16. Todos los productos de una categoría se les debe aplicar el descuento de la categoría hint: crear un método en el
-producto que obtenga el precio con descuento
-Parte Front-end
+16. Todos los productos de una categoría se les debe aplicar el descuento de la categoría hint: crear un método en el producto que obtenga el precio con descuento
+
+## Parte Front-end
 1. Construir el controller de productos con el método index
 2. En la vista index mostrar todos los productos
 3. cada producto debe aparecer junto con su categoría
@@ -52,7 +56,8 @@ Parte Front-end
 10. Agregar al layout bootstrap
 11. Poner el yield dentro de un container
 12. Agregar el navbar y poner dentro de este los links a categorías y a productos.
-Deployment
+
+## Deployment
 1. Subir a Github
 2. Poner las gemas necesarias para heroku
 3. crear y Push a heroku
